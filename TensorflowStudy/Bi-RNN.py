@@ -63,5 +63,5 @@ with tf.Session() as sess:
 
     test_len = 10000
     test_data = mnist.test.images[:test_len].reshape((-1, n_steps, n_input))
-    test_label = mnist.test.label[:test_len]
+    test_label = mnist.test.labels[:test_len]
     print("Testing Accuracy:", sess.run(accuracy, feed_dict={x: test_data, y: test_label}))
